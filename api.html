@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#btn').click(function(){
+				
+				
+				/*var url = "https://eds.modcam.io/v1/peoplecounter/installation";
+				const installation = "5a420343b7e14e0007d73376";
+				var projction = "hours";
+				//var outer_range_start = $('outer_range_start').val();
+				//var outer_range_end = $('outer_range_end').val();
+				var date = ""
+				// var furl = url+'/'+installation+'/'+projction+'/'+outer_range_start+'/'+outer_range_end;*/
+				var furl="https://eds.modcam.io/v1/peoplecounter/installation/5a420343b7e14e0007d73376/hours/2017-12-25/2017-12-27?st=00:00&et=24:00";
+
+
+				$.ajax({
+
+                headers: {
+                'Content-Type':'application/json',
+                'x-client-id':'digispc',
+                'x-api-key':'5a420343b7e14e0007d73376'
+                },
+				 url: furl,
+				 crossDomain:true,
+ 				 method: 'GET',	
+				//  dataType: 'JSON',
+				 success: function(data){
+				 		console.log("Data was ", data);
+				          
+										}	
+				});﻿
+
+
+			});
+		});
+
+
+	</script>
+</head>
+<body>
+	<button id="btn"> click </button>
+</body>
+</html>
